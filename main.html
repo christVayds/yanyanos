@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/main.css">
+    <link rel="stylesheet" href="assets/styles/media.css">
+    <script src="https://kit.fontawesome.com/9515269a08.js" crossorigin="anonymous"></script>
+    <title>YanYan's OS</title>
+</head>
+<body>
+
+    <div>
+        <audio src="assets/audio/click.wav" preload="auto" id="clicksfx"></audio>
+        <audio src="assets/audio/woosh.wav" preload="auto" id="exitsfx"></audio>
+        <audio src="assets/audio/woosh.wav" preload="auto" id="papersfx"></audio>
+    </div>
+
+    <div class="window about" id="about">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>About me</p>
+            </div>
+        </div>
+
+        <div class="win_content showBorder">
+            <div class="about_content">
+                <div class="meImage showBorder">
+                    <img src="assets/images/mebw.webp" alt="me">
+                </div>
+                <div class="about_text showBorder">
+                    <h1>Christian Vaydal [<span class="highlight">Yan-yan</span>]</h1>
+                    <p>I'm a <span class="highlight">Web Developer</span> with a passion for creating dynamic and responsive web applications. I love coding and enjoy the challenge of solving complex problems.</p>
+                    <p>With a background in <span class="highlight">Information Technology</span>, I have honed my skills in HTML, CSS, JavaScript, and various frameworks. I am always eager to learn new technologies and improve my craft.</p>
+                    <br>
+                    <p>Let's connect and create amazing things together!</p>
+                </div>
+            </div>
+            <div class="info listedInfo">
+                <h2>Services</h2>
+                <ul class="listDisplay">
+                    <li>UI/UX Design</li>
+                    <li>Web Development</li>
+                    <li>Game Development</li>
+                    <li>Software Development</li>
+                    <li>Graphic Design</li>
+                </ul>
+            </div>
+
+            <div class="info listedInfo">
+                <h2>Educations</h2>
+                <div class="cardDisplay">
+                    <img src="assets/images/sbcalogo.webp" alt="school">
+                    <div class="edInfo showBorder">
+                        <h2>BS in Information Technology</h2>
+                        <p>St. Bernadette College of Alabang, inc.</p>
+                        <p>2021 - Present</p>
+                    </div>
+                </div>
+                <div class="cardDisplay">
+                    <img src="assets/images/au.webp" alt="school">
+                    <div class="edInfo showBorder">
+                        <h2>Tech-Voc Hospitality Management</h2>
+                        <p>Arellano University Jose Abad Santos</p>
+                        <p>2018 - 2020</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info listedInfo">
+                <h2>Skills</h2>
+                <div class="group">
+                    <h3>Development</h3>
+                    <div class="items">
+                        <div class="item">C/C++</div>
+                        <div class="item">Python</div>
+                        <div class="item">Java</div>
+                        <div class="item">C#</div>
+                        <div class="item">Lua</div>
+                        <div class="item">Julia</div>
+                        <div class="item">JavaScript</div>
+                        <div class="item">HTML/CSS</div>
+                        <div class="item">React.js</div>
+                        <div class="item">Next.js</div>
+                        <div class="item">PHP</div>
+                        <div class="item">Node.js</div>
+                        <div class="item">Laravel</div>
+                        <div class="item">Pygame</div>
+                        <div class="item">Raylib</div>
+                        <div class="item">Love2D</div>
+                        <div class="item">Python Django</div>
+                        <div class="item">Python Flask</div>
+                        <div class="item">Express JS</div>
+                    </div>
+                </div>
+                <div class="group">
+                    <h3>Tools</h3>
+                    <div class="items">
+                        <div class="item">Photoshop</div>
+                        <div class="item">Canva</div>
+                        <div class="item">Unity Engine</div>
+                        <div class="item">Godot 4</div>
+                        <div class="item">Figma</div>
+                        <div class="item">Blender</div>
+                        <div class="item">Asprite</div>
+                        <div class="item">Pixelorama</div>
+                        <div class="item">Audacity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window contact" id="contact">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>Contacts</p>
+            </div>
+        </div>
+        <div class="win_content showBorder">
+            <div class="iconLink">
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p>Instagram</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <p>Twitter/X</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-threads"></i>
+                    <p>Threads</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>Email</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-discord"></i>
+                    <p>Discord</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-youtube"></i>
+                    <p>YouTube</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-brands fa-facebook"></i>
+                    <p>FB Page</p>
+                </a>
+                <a href="#" class="link clickedsfx showBorder">
+                    <i class="fa-solid fa-question"></i>
+                    <p>Not yet</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="window work" id="works">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>Works</p>
+            </div>
+        </div>
+        <div class="win_content showBorder">
+            <div class="emailme showBorder">
+                <div class="emailtext">
+                    <h3>Let's work together!</h3>
+                    <p>Got a project in mind? Whether you’re looking for a developer to collaborate, build something awesome together, or hire for your next idea — I’m all ears!</p>
+                    <p>Email me at <span><a href="#">christianvaydal112@gmail.com</a></span></p>
+                    <br>
+                    <p>I usually respond fast, so don’t be shy. Let’s create amazing things together!</p>
+                </div>
+            </div>
+            <div class="workSection showBorder">
+                <h2>Development</h2>
+                <div class="workItem">
+                    <img src="assets/images/backintime.webp" alt="project">
+                    <div class="projDesc showBorder">
+                        <h3>Back In Time</h3>
+                        <p>Game</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <div class="actions showBorder">
+                            <a href="#" class="linked clickedsfx">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workItem">
+                    <img src="assets/images/minescape.webp" alt="project">
+                    <div class="projDesc showBorder">
+                        <h3>MineScape</h3>
+                        <p>Game</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <div class="actions showBorder">
+                            <a href="#" class="linked clickedsfx">Github</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="workItem">
+                    <img src="assets/images/sbcaportal.webp" alt="project">
+                    <div class="projDesc showBorder">
+                        <h3>SBCA School Portal</h3>
+                        <p>Web Development</p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <div class="actions showBorder">
+                            <a href="#" class="linked clickedsfx">Github</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window faqs" id="faqs">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>FAQs</p>
+            </div>
+        </div>
+        <div class="win_content showBorder">
+            <div class="qa_item">
+                <div class="question">
+                    <p>What kind of projects do you work on?</p>
+                </div>
+                <div class="answer">
+                    <p>I work on websites, games, and various software projects — from frontend designs to full systems and game dev using tools like Pygame, Godot, and Love2D.</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>Are you available for freelance or commissions?</p>
+                </div>
+                <div class="answer">
+                    <p>Yes! I'm open for freelance work, commissions, and collaborations. Just send me an email or message me on my socials.</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>What tech stacks do you use?</p>
+                </div>
+                <div class="answer">
+                    <p>I use HTML, CSS, JavaScript, PHP (Laravel), MySQL, C++, Python, Lua, and more. For game dev, I work with Pygame, Godot, and Love2D.</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>Can you build a website for me?</p>
+                </div>
+                <div class="answer">
+                    <p>Absolutely. I can help design, develop, and deploy websites — from simple landing pages to full web apps.</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>How do I contact you?</p>
+                </div>
+                <div class="answer">
+                    <p>You can email me at <span class="highlight"><a href="#">christianvaydal112@gmail.com</a></span> or use the contact form below. I usually reply within 24 hours.</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>Do you work with international clients?</p>
+                </div>
+                <div class="answer">
+                    <p>Yes, I work with clients from anywhere around the world — as long as we can communicate clearly and the project is exciting!</p>
+                </div>
+            </div>
+            <div class="qa_item">
+                <div class="question">
+                    <p>Are you a student right now?</p>
+                </div>
+                <div class="answer">
+                    <p>Yep! I'm currently studying BSIT (Bachelor of Science in Information Technology) while building real-world projects.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="window gallery" id="gallery">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>Gallery</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container showBorder">
+        <div class="header">
+            <div class="menu">
+                <div class="icons"><i class="fa-solid fa-moon"></i></div>
+                <div class="icons"><i class="fa-solid fa-volume-off"></i></div>
+                <div class="icons"><i class="fa-solid fa-music"></i></div>
+            </div>
+        </div>
+        <div class="content showBorder">
+            <div class="side icon showBorder">
+                <div class="clickIcons showBorder">
+                    <div class="iconItem" id="aboutButton">
+                        <div class="userImage">
+                            <img src="assets/images/mebw.webp" alt="yanyan">
+                        </div>
+                        <p>About me</p>
+                    </div>
+                    <div class="iconItem" id="contactButton">
+                        <div class="userImage">
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+                        <p>Contact</p>
+                    </div>
+                    <div class="iconItem" id="worksButton">
+                        <div class="userImage">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <p>Works</p>
+                    </div>
+                    <div class="iconItem" id="faqsButton">
+                        <div class="userImage">
+                            <i class="fa-solid fa-question"></i>
+                        </div>
+                        <p>FAQs</p>
+                    </div>
+                    <div class="iconItem" id="galleryButton">
+                        <div class="userImage">
+                            <i class="fa-solid fa-photo-film"></i>
+                        </div>
+                        <p>Gallery</p>
+                    </div>
+                </div>
+            </div>
+            <div class="side greethings showBorder">
+                <div class="showBorder">
+                    <h1>Hello</h1>
+                    <p>Let's Create Amazing Things Together!</p>
+                    <p>I'm a Web Developer</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/script/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .content{
+        flex-direction: column ;
+    }
+
+    .content .icon{
+        width: 100%;
+        height: 40%;
+    }
+
+    .content .greethings{
+        order: -1;
+        height: 60%;
+        padding: 20px;
+    }
+
+    .window.contact,
+    .window{
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .win_content .about_content{
+        flex-direction: column;
+    }
+
+    .win_content .info .cardDisplay{
+        flex-direction: column;
+    }
+
+    .win_content .info .cardDisplay .edInfo{
+        padding-left: 0;
+    }
+}
