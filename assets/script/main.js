@@ -4,7 +4,7 @@ let offsetY = 0;
 let draggedWindow = null;
 let draggedTitle = null;
 let zIndexCounter = 0;
-let sfxVolume = 0.15;
+let sfxVolume = 1;
 let sfxOn = true;
 let musicOn = false;
 
@@ -54,6 +54,13 @@ document.getElementById('galleryButton').addEventListener('click', () => {
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
+});
+
+document.getElementById('viewResume').addEventListener('click', () => {
+    let aboutWindow = document.getElementById('resumeViever');
+    aboutWindow.style.display = 'flex';
+    aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
+    playSound(papersfx);
 });
 
 // opening link

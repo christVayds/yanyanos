@@ -114,6 +114,23 @@
         </div>
     </div>
 
+    <div class="window resume" id="resumeViever">
+        <div class="win_header showBorder">
+            <div class="exit showBorder">
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="win_label">
+                <p>My Resume</p>
+            </div>
+        </div>
+
+        <div class="win_content showBorder">
+            <div class="resumePDF showBorder">
+                <embed src="assets/files/christianVaydalResume.pdf" type="application/pdf" width="100%" height="100%" style="border-radius: 10px;"/>
+            </div>
+        </div>
+    </div>
+
     <div class="window contact" id="contact">
         <div class="win_header showBorder">
             <div class="exit showBorder">
@@ -125,38 +142,38 @@
         </div>
         <div class="win_content showBorder">
             <div class="iconLink">
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="https://www.instagram.com/christixn______/" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-instagram"></i>
                     <p>Instagram</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="#" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-x-twitter"></i>
                     <p>Twitter/X</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="https://www.threads.com/@christixn______?xmt=AQF0Pf5ghezpmdo36IFDI2dZWh1GZg2MKIIVty6WSb6jx1Y" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-threads"></i>
                     <p>Threads</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="#" class="link clickedsfx showBorder">
                     <i class="fa-solid fa-envelope"></i>
                     <p>Email</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="#" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-discord"></i>
                     <p>Discord</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="https://www.youtube.com/@christianvaydal5691" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-youtube"></i>
                     <p>YouTube</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
+                <a target="_blank" href="https://web.facebook.com/christ.vayds/" class="link clickedsfx showBorder">
                     <i class="fa-brands fa-facebook"></i>
                     <p>FB Page</p>
                 </a>
-                <a href="#" class="link clickedsfx showBorder">
-                    <i class="fa-solid fa-question"></i>
-                    <p>Not yet</p>
-                </a>
+                <div class="link clickedsfx showBorder" id="viewResume">
+                    <i class="fa-solid fa-file"></i>
+                    <p>Resume</p>
+                </div>
             </div>
         </div>
     </div>
@@ -182,23 +199,44 @@
             </div>
             <div class="workSection showBorder">
                 <h2>Development</h2>
+                <div class="canPlayText showBorder">
+                    <h2>Want to experience playing my games?</h2>
+                    <p>You can play playable games in this list, just click play.</p>
+                </div>
+
+                <!-- Projects Items -->
+
                 <div class="workItem">
                     <img src="assets/images/backintime.webp" alt="project">
                     <div class="projDesc showBorder">
                         <h3>Back In Time</h3>
-                        <p>Game</p>
-                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <p class="projCat">Game <span class="techs">Python • Pygame • C/C++</span></p>
+                        <p class="desc">A cozy 2D RPG where players explore, fight, and solve the puzzle to change the past and save the future — created as my school’s final project.</p>
                         <div class="actions showBorder">
                             <a href="#" class="linked clickedsfx">Github</a>
                         </div>
                     </div>
                 </div>
+
+                <div class="workItem">
+                    <img src="assets/images/home.png" alt="project">
+                    <div class="projDesc showBorder">
+                        <h3>Home</h3>
+                        <p class="projCat">Game <span class="techs">Pico8 • Lua</span></p>
+                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <div class="actions showBorder">
+                            <a href="#" class="linked clickedsfx">Github</a>
+                            <p class="linked testPlay clickedsfx" id="home">Play</p>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="workItem">
                     <img src="assets/images/minescape.webp" alt="project">
                     <div class="projDesc showBorder">
                         <h3>MineScape</h3>
-                        <p>Game</p>
-                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <p class="projCat">Game <span class="techs">Godot • GDScript • C#</span></p>
+                        <p class="desc">A massive 2D sandbox horror game inspired by Minecraft and Terraria — still in development with dark, atmospheric vibes.</p>
                         <div class="actions showBorder">
                             <a href="#" class="linked clickedsfx">Github</a>
                         </div>
@@ -208,8 +246,8 @@
                     <img src="assets/images/sbcaportal.webp" alt="project">
                     <div class="projDesc showBorder">
                         <h3>SBCA School Portal</h3>
-                        <p>Web Development</p>
-                        <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores culpa reprehenderit omnis. Similique, corporis minus asperiores aperiam deserunt obcaecati ut quod voluptatem vitae praesentium suscipit nisi repudiandae dolore at eius?</p>
+                        <p class="projCat">Web Development <span class="techs">PHP • HTML/CSS/JavaScript • MySQL • JQuery • XAMPP</span></p>
+                        <p class="desc">A complete school portal system built as our thesis, designed for managing enrollment, news, and student records.</p>
                         <div class="actions showBorder">
                             <a href="#" class="linked clickedsfx">Github</a>
                         </div>
@@ -310,38 +348,49 @@
         <div class="content showBorder">
             <div class="side icon showBorder">
                 <div class="clickIcons showBorder">
+
+                    <!-- About me -->
                     <div class="iconItem" id="aboutButton">
                         <div class="userImage">
                             <img src="assets/images/mebw.webp" alt="yanyan">
                         </div>
-                        <p>About me</p>
+                        <p>Christian V.</p>
                     </div>
-                    <div class="iconItem" id="contactButton">
-                        <div class="userImage">
-                            <i class="fa-solid fa-address-card"></i>
-                        </div>
-                        <p>Contact</p>
-                    </div>
+
+                    <!-- Works -->
                     <div class="iconItem" id="worksButton">
                         <div class="userImage">
                             <i class="fa-solid fa-diagram-project"></i>
                         </div>
                         <p>Works</p>
                     </div>
+
+                    <!-- FAQs -->
                     <div class="iconItem" id="faqsButton">
                         <div class="userImage">
                             <i class="fa-solid fa-question"></i>
                         </div>
                         <p>FAQs</p>
                     </div>
+
+                    <!-- Gallery -->
                     <div class="iconItem" id="galleryButton">
                         <div class="userImage">
                             <i class="fa-solid fa-photo-film"></i>
                         </div>
                         <p>Gallery</p>
                     </div>
+
+                    <!-- Contact -->
+                    <div class="iconItem" id="contactButton">
+                        <div class="userImage">
+                            <i class="fa-solid fa-address-card"></i>
+                        </div>
+                        <p>Contact</p>
+                    </div>
                 </div>
             </div>
+
             <div class="side greethings showBorder">
                 <div class="showBorder">
                     <h1>Hello</h1>
