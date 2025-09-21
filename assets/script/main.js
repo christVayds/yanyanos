@@ -63,6 +63,19 @@ document.getElementById('viewResume').addEventListener('click', () => {
     playSound(papersfx);
 });
 
+// play game
+document.getElementById('play-home').addEventListener('click', () => {
+    let window = document.getElementById('game-container');
+    window.style.display = 'flex';
+    window.style.zIndex = ++zIndexCounter; // Bring to front
+
+    const iframe = window.querySelector('iframe');
+    iframe.src = 'assets/games/home/ship.html'; // Reload iframe content
+    if(iframe){iframe.focus();}
+
+    playSound(papersfx);
+});
+
 // opening link
 document.querySelectorAll(".clickedsfx").forEach((link) => {
     link.addEventListener('click', ()=>{

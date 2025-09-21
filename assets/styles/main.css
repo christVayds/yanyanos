@@ -56,8 +56,8 @@ a{
 
 .window{
     position: absolute;
-    top: 100px;
-    left: 100px;
+    top: 10%;
+    left: 10%;
     width: 70%;
     height: 80%;
     border: 2px solid var(--border-color);
@@ -75,6 +75,10 @@ a{
 .window.contact{
     width: 50%;
     height: 60%;
+}
+
+.window.game-container{
+    max-width: 640px;
 }
 
 .window .win_header{
@@ -216,6 +220,7 @@ a{
     flex-direction: column;
     font-size: 50px;
     margin: 20px;
+    cursor: pointer;
 }
 
 .win_content .iconLink .link p{
@@ -277,7 +282,11 @@ a{
     color: var(--secondary-color);
 }
 
-.win_content .workSection .workItem .projDesc .linked.testPlay{
+.win_content .workSection .workItem .projDesc .linked.button{
+    cursor: pointer;
+}
+
+.win_content .workSection .workItem .projDesc .linked.button.nWindow{
     background-color: var(--primary-color);
     cursor: pointer;
 }
