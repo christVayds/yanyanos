@@ -12,9 +12,12 @@ const clicksfx = document.getElementById('clicksfx');
 const exitsfx = document.getElementById('exitsfx');
 const papersfx = document.getElementById('papersfx');
 
+// set volume here
+clicksfx.volume = .5
+exitsfx.volume = .1
+
 function playSound(sound) {
     if(sfxOn){
-        sound.volume = sfxVolume;
         sound.currentTime = 0; // Reset sound
         sound.play(); // Play sound
     }

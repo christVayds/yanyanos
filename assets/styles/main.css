@@ -431,6 +431,6 @@ a{
     color: var(--secondary-color);
 }
 
-.showBorder{
+/* .showBorder{
     border: 1px solid var(--error);
-}
+} */
