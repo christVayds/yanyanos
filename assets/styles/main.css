@@ -54,6 +54,11 @@ a{
     color: var(--primary-color);
 }
 
+.changingText{
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 .window{
     position: absolute;
     top: 10%;
