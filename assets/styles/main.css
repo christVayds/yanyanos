@@ -124,6 +124,7 @@ a{
 .win_content .about_content .meImage{
     width: 200px;
     height: 200px;
+    border: 1px solid var(--border-color);
 }
 
 .win_content .about_content .meImage img{
