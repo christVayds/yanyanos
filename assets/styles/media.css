@@ -15,13 +15,16 @@
         padding: 20px;
     }
 
+    .window.resume,
     .window.contact,
     .window{
+        position: fixed;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        border-radius: 0;
     }
 
     .win_content .about_content{
@@ -34,5 +37,19 @@
 
     .win_content .info .cardDisplay .edInfo{
         padding-left: 0;
+    }
+
+    .win_content .about_content .meImage{
+        width: 100%;
+        height: auto;
+    }
+
+    .win_content .workSection .workItem{
+        flex-direction: column;
+    }
+
+    .win_content .workSection .workItem img{
+        width: 100%;
+        height: auto;
     }
 }
