@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -8,7 +8,7 @@
 }
 
 :root {
-    --primary-color: #627bc2;
+    --primary-color: #4a9900;
     --secondary-color: #d4d4d4;
     --text-color: #333333;
     --border-color: #757575b2;
@@ -64,6 +64,7 @@ a{
     color: var(--primary-color);
     overflow: hidden;
     margin-left: 10px;
+    font-family: "JetBrains Mono", monospace;
 }
 
 .cursor{
@@ -442,6 +443,38 @@ a{
     font-size: 30px;
 }
 
+.gallery .win_content .images{
+    column-count: 3;
+    column-gap: 10px;
+    width: 100%;
+}
+
+.gallery .win_content .sunflower{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery .win_content .sunflower img{
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+.gallery .win_content .galleryDescription{
+    margin-bottom: 50px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.gallery .win_content img{
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    break-inside: avoid;
+    transition: transform 0.3s ease;
+}
+
 /* Hover and effects */
 .header .menu:hover{
     background-color: var(--hover-color);
@@ -450,6 +483,10 @@ a{
 .win_content .info .group .items .item:hover{
     background-color: var(--border-color);
     color: var(--secondary-color);
+}
+
+.gallery .win_content img:hover{
+    transform: scale(0.95);
 }
 
 /* .showBorder{

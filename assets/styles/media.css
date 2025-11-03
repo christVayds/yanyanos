@@ -52,4 +52,8 @@
         width: 100%;
         height: auto;
     }
+
+    .gallery .win_content .images{
+        column-count: 2;
+    }
 }
