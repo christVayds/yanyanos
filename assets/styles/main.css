@@ -54,9 +54,25 @@ a{
     color: var(--primary-color);
 }
 
+.iAm{
+    display: flex;
+    align-items: center;
+}
+
 .changingText{
     font-weight: bold;
     color: var(--primary-color);
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.cursor{
+    display: inline-block;
+    width: 10px;
+    height: 30px;
+    background-color: var(--primary-color);
+    margin-left: 5px;
+    /* animation: blink 1s infinite; */
 }
 
 .window{
@@ -120,6 +136,7 @@ a{
     flex-direction: column;
     padding: 20px;
     overflow-y: auto;
+    behavior: smooth;
 }
 
 .win_content .about_content{
@@ -129,7 +146,6 @@ a{
 .win_content .about_content .meImage{
     width: 200px;
     height: 200px;
-    border: 1px solid var(--border-color);
 }
 
 .win_content .about_content .meImage img{
@@ -137,7 +153,6 @@ a{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    border: 2px solid var(--border-color);
 }
 
 .win_content .about_content .about_text{
