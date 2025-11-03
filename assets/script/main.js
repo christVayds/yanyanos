@@ -26,6 +26,8 @@ function playSound(sound) {
 // opening window
 document.getElementById('aboutButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('about');
+    let childDiv = aboutWindow.querySelector('.win_content');
+    childDiv.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
@@ -33,6 +35,7 @@ document.getElementById('aboutButton').addEventListener('click', () => {
 
 document.getElementById('contactButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('contact');
+    aboutWindow.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
@@ -40,6 +43,7 @@ document.getElementById('contactButton').addEventListener('click', () => {
 
 document.getElementById('worksButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('works');
+    aboutWindow.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
@@ -47,6 +51,7 @@ document.getElementById('worksButton').addEventListener('click', () => {
 
 document.getElementById('faqsButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('faqs');
+    aboutWindow.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
@@ -54,6 +59,7 @@ document.getElementById('faqsButton').addEventListener('click', () => {
 
 document.getElementById('galleryButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('gallery');
+    aboutWindow.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
@@ -61,6 +67,7 @@ document.getElementById('galleryButton').addEventListener('click', () => {
 
 document.getElementById('viewResume').addEventListener('click', () => {
     let aboutWindow = document.getElementById('resumeViever');
+    aboutWindow.scrollTop = 0; // Reset scroll position
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(papersfx);
@@ -92,10 +99,8 @@ document.querySelectorAll('.exit').forEach((exitButton) => {
         playSound(exitsfx);
         let window = exitButton.parentElement.parentElement
         window.style.display = 'none';
+        window.scrollTop = 0; // Reset scroll position
         window.style.zIndex = 0; // Reset z-index when closed
-        // window.style.left = '50%'; // Reset position
-        // window.style.top = '50%'; // Reset position
-        // window.style.transform = "translate(-50%, -50%)";
     });
 });
 
@@ -134,3 +139,34 @@ document.addEventListener('mouseup', () => {
     draggedWindow = null;
     draggedTitle = null;
 });
+
+let seconds = 0
+let Word = ["Web Developer", "Game Developer", "Programmer", "Web Designer", "Graphic Artist", "System Developer", "UI/UX Designer", "Software Developer"]
+let wordIndex = 0
+let index = 0
+let word = ""
+let wait = false
+
+const changingText = document.getElementById("service");
+const timer = setInterval(() => {
+    seconds++
+    if(!wait){
+        word += Word[wordIndex][index]
+        changingText.textContent = word 
+        index++
+        if(index >= Word[wordIndex].length){
+            wordIndex++
+            if(wordIndex >= Word.length){
+                wordIndex = 0
+            }
+            index = 0
+            word = ""
+            seconds = 0
+            wait = true
+        }
+    } else {
+        if(seconds >= 10){
+            wait = false
+        }
+    }
+}, 50) // 1000ms = 1s
