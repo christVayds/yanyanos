@@ -161,7 +161,22 @@ a{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    /* justify-content: center; */
+    height: 250px;
+}
+
+.win_content .about_content .about_text .textContainer{
+    display: flex;
+}
+
+.win_content .about_content .about_text .textContainer i{
+    border: 1px solid var(--border-color);
+    font-size: 10px;
+    margin-top: 5px;
+    width: 8px;
+    margin-left: 5px;
+    color: transparent;
+    background-color: var(--primary-color);
 }
 
 .win_content .info{
