@@ -312,7 +312,8 @@ a{
 }
 
 .win_content .workSection .workItem .projDesc .linked{
-    margin: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
     padding: 10px;
     border-radius: 10px;
     background-color: var(--text-color);
@@ -378,7 +379,7 @@ a{
     align-items: center;
     justify-content: end;
     padding: 10px;
-    background-color: var(--header-color);
+    /* background-color: var(--header-color); */
 }
 
 .header .menu{
@@ -398,7 +399,7 @@ a{
     align-items: center;
     justify-content: center;
     margin: 5px;
-    color: var(--secondary-color);
+    color: var(--header-color);
 }
 
 .content{
@@ -491,9 +492,9 @@ a{
 }
 
 /* Hover and effects */
-.header .menu:hover{
+/* .header .menu:hover{
     background-color: var(--hover-color);
-}
+} */
 
 .win_content .info .group .items .item:hover{
     background-color: var(--border-color);
