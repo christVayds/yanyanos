@@ -14,8 +14,8 @@ let aboutIndex = 0
 let type = false
 
 const aboutme = [
-    "Hi! I'm Christian Vaydal, a passionate programmer, digital artist, and game developer who loves blending creativity with technology. I especialize in web developement, graphic design, and game development, working across languages and tools like Python, C/C++, Java, C#, PHP, Godot, Unity, Pygame and Raylib.",
-    "I enjoy building interactive experiences, from web apps and portfolios sites to 2D and 3D games. I'm also fascinated by retro games, programming, and computer hardware, which inspire much of my design and development style.",
+    "Hi! I'm Christian Vaydal, a passionate programmer, digital artist, and game developer who loves blending creativity with technology. I especialize in web developement, graphic design, and game development, working across languages and tools like Python, C/C++, Java, C#, PHP, Godot, Unity, Pygame and Raylib. ",
+    "I enjoy building interactive experiences, from web apps and portfolios sites to 2D and 3D games. I'm also fascinated by retro games, programming, and computer hardware, which inspire much of my design and development style. ",
     "My goal is to create meaningful digital experiences that connect technology, art, and imagination."
 ]
 
