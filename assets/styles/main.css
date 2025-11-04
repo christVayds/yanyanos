@@ -25,6 +25,7 @@ html, body {
     background-color: var(--secondary-color);
     width: 100%;
     height: 100%;
+    behavior: smooth;
 }
 
 audio{
@@ -503,6 +504,18 @@ a{
 
 .gallery .win_content img:hover{
     transform: scale(0.95);
+}
+
+/* animation */
+.slide-up{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.5s ease-out;
+}
+
+.slide-up.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* .showBorder{
