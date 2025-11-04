@@ -31,6 +31,10 @@
         flex-direction: column;
     }
 
+    .win_content .about_content .about_text {
+        min-height: 400px;
+    }
+
     .win_content .info .cardDisplay{
         flex-direction: column;
     }

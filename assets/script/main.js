@@ -8,6 +8,18 @@ let sfxVolume = 1;
 let sfxOn = true;
 let musicOn = false;
 
+let pWord = ""
+let pIndex = 0
+let aboutIndex = 0
+let type = false
+
+const aboutme = [
+    "Hi! I'm Christian Vaydal, a passionate programmer, digital artist, and game developer who loves blending creativity with technology. I especialize in web developement, graphic design, and game development, working across languages and tools like Python, C/C++, Java, C#, PHP, Godot, Unity, Pygame and Raylib.",
+    "I enjoy building interactive experiences, from web apps and portfolios sites to 2D and 3D games. I'm also fascinated by retro games, programming, and computer hardware, which inspire much of my design and development style.",
+    "My goal is to create meaningful digital experiences that connect technology, art, and imagination."
+]
+
+const pAboutMe = document.getElementById("aboutMe")
 const clicksfx = document.getElementById('clicksfx');
 const exitsfx = document.getElementById('exitsfx');
 const papersfx = document.getElementById('papersfx');
@@ -31,6 +43,10 @@ document.getElementById('aboutButton').addEventListener('click', () => {
     aboutWindow.style.display = 'flex';
     aboutWindow.style.zIndex = ++zIndexCounter; // Bring to front
     playSound(clicksfx);
+    type = true
+    pWord = ""
+    pIndex = 0
+    aboutIndex = 0
 });
 
 document.getElementById('contactButton').addEventListener('click', () => {
@@ -170,3 +186,18 @@ const timer = setInterval(() => {
         }
     }
 }, 50) // 1000ms = 1s
+
+const aboutTimer = setInterval(() => {
+    if(type){
+        pWord += aboutme[aboutIndex][pIndex]
+        pAboutMe.innerHTML = pWord + '<i class="fa-solid fa-i-cursor"></i>'
+        pIndex++
+        if(pIndex >= aboutme[aboutIndex].length){
+            if(aboutIndex >= aboutme.length-1){
+                type = false
+            }
+            aboutIndex++
+            pIndex = 0
+        }
+    }
+}, 20);
