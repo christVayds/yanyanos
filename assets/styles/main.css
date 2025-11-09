@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Jost:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
@@ -15,7 +15,7 @@
     --header-color: #494949;
     --error: #ff5959;
     --hover-color: #42424241;
-    --font-family: "Sour Gummy", sans-serif;
+    --font-family: "Pixelify Sans", sans-serif;
     --jost-font-family: "Jost", sans-serif;
 }
 
@@ -65,7 +65,8 @@ a{
     color: var(--primary-color);
     overflow: hidden;
     margin-left: 10px;
-    font-family: "JetBrains Mono", monospace;
+    /* font-family: "JetBrains Mono", monospace; */
+    font-family: var(--font-family);
 }
 
 .cursor{
@@ -192,6 +193,10 @@ a{
     margin-left: 50px;
 }
 
+.win_content .info h2{
+    margin-bottom: 20px;
+}
+
 .win_content .info .listDisplay li{
     padding: 5px;
 }
@@ -209,7 +214,7 @@ a{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .win_content .info .cardDisplay .edInfo{
@@ -220,7 +225,7 @@ a{
 
 .win_content .info .group{
     border: 1px solid var(--border-color);
-    border-radius: 10px;
+    border-radius: 0;
     min-height: 100px;
     padding: 10px;
     margin-bottom: 20px;
@@ -274,7 +279,7 @@ a{
 .win_content .emailme .emailtext{
     font-size: 20px;
     padding: 10px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     color: var(--secondary-color);
     background-color: var(--text-color);
     border: 1px solid var(--border-color);
@@ -298,7 +303,7 @@ a{
     width: 300px;
     height: 200px;
     object-fit: cover;
-    border-radius: 20px;
+    /* border-radius: 20px; */
 }
 
 .win_content .workSection .workItem .projDesc{
@@ -318,8 +323,8 @@ a{
     margin-right: 10px;
     margin-top: 10px;
     padding: 10px;
-    border-radius: 10px;
-    border: 2px solid var(--text-color);
+    /* border-radius: 10px; */
+    border: 1px solid var(--text-color);
     color: var(--text-color);
 }
 
@@ -348,7 +353,6 @@ a{
 .win_content .workSection .canPlayText{
     padding: 10px;
     border: 1px solid var(--primary-color);
-    border-radius: 10px;
     min-height: 50px;
 }
 
@@ -356,7 +360,7 @@ a{
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     margin-bottom: 20px;
 }
 
@@ -364,7 +368,7 @@ a{
     font-size: 20px;
     color: var(--secondary-color);
     background-color: var(--text-color);
-    border-radius: 10px;
+    /* border-radius: 10px; */
     padding: 10px;
 }
 
