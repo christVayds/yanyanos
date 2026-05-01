@@ -78,6 +78,10 @@ a{
     /* animation: blink 1s infinite; */
 }
 
+.entry{
+  color: var(--primary-color);
+}
+
 .window{
     position: absolute;
     top: 10%;
