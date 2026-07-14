@@ -35,6 +35,23 @@ function playSound(sound) {
     }
 }
 
+// Projects data: description and image filenames (relative to assets/images)
+const projects = [
+    { title: "Nano8", desc: "Nano8 is a fantasy micro-computer game engine I developed. It provides a simple yet powerful framework for creating 2D games with a retro aesthetic.", images: ["nano8.png"] },
+    { title: "MonkeyRoulette", desc: "MonkeyRoulette is my entry for The Very Serious Juniper Dev Game Jam 2026. Spin the roulette to align colors and avoid letting fruits reach the bottom.", images: ["monkeyroulette.png"] },
+    { title: "Altech.ph", desc: "Freelance web development where I improved responsiveness, UI, and performance for the company's website.", images: ["altech_ph.png"] },
+    { title: "Jack 'n Junk", desc: "Jack 'n Junk is an entry for GameDev.js Jam 2026. Protect the sunflower and carry it to the Life Machine in this action-RPG.", images: ["jacknjunk.png"] },
+    { title: "Mirror Move", desc: "Mirror Move is a puzzle game where you control two entities with different directions and try to merge them.", images: ["mirrormove.png"] },
+    { title: "JiC Interpreter", desc: "JiC is the interpreter for my Yanji Programming language. It is written in C.", images: ["yanji.png"] },
+    { title: "Brainfuck Interpreter in C", desc: "A Brainfuck interpreter implemented in C.", images: ["brainfuck.webp"] },
+    { title: "Back In Time", desc: "A cozy 2D RPG built in Pygame where players explore, fight, and solve puzzles to change the past.", images: ["backintime.webp"] },
+    { title: "Home", desc: "HOME is a 2D mini game made in Pico-8. (Under Development)", images: ["home.png"] },
+    { title: "Yanji Compiler Prototype", desc: "A prototype of my programming language implemented in Python with LLVMLite.", images: [] },
+    { title: "MineScape", desc: "A massive 2D sandbox horror game inspired by Minecraft and Terraria — still in development.", images: ["minescape.webp"] },
+    { title: "SBCA School Portal", desc: "A complete school portal system built as a thesis project for managing enrollment and student records.", images: ["sbcaportal.webp"] },
+    { title: "My First Web Portfolio", desc: "My first web portfolio.", images: ["christianvaydalportfolio.png"] }
+]
+
 // opening window
 document.getElementById('aboutButton').addEventListener('click', () => {
     let aboutWindow = document.getElementById('about');
@@ -154,6 +171,103 @@ document.addEventListener('mouseup', () => {
     draggedTitle.style.cursor = 'grab';
     draggedWindow = null;
     draggedTitle = null;
+});
+
+// Inject "View More Info" buttons into each project and handle opening the project info window
+function setupProjectButtons() {
+    const workItems = document.querySelectorAll('.workItem');
+    workItems.forEach((item, i) => {
+        const actions = item.querySelector('.actions');
+        if (!actions) return;
+        // skip if a view-more already exists
+        if (actions.querySelector('.view-more')) return;
+
+        const btn = document.createElement('p');
+        btn.className = 'linked button view-more clickedsfx';
+        btn.textContent = 'View More Info';
+        btn.dataset.index = i;
+        actions.appendChild(btn);
+
+        btn.addEventListener('click', (e) => {
+            playSound(clicksfx);
+            const idx = parseInt(e.currentTarget.dataset.index, 10);
+            openProjectWindow(idx);
+        });
+    });
+}
+
+// Create or reuse a project info window, populate with data, and show it
+function openProjectWindow(index) {
+    const data = projects[index] || { title: 'Project', desc: 'No details available.', images: [] };
+
+    let win = document.getElementById('projectInfo');
+    if (!win) {
+        win = document.createElement('div');
+        win.className = 'window project';
+        win.id = 'projectInfo';
+        win.style.display = 'flex';
+        win.style.flexDirection = 'column';
+        win.innerHTML = `
+            <div class="win_header showBorder">
+                <div class="exit showBorder"><i class="fa-solid fa-xmark"></i></div>
+                <div class="win_label"><p></p></div>
+            </div>
+            <div class="win_content showBorder">
+                <div class="projectContent"></div>
+            </div>`;
+        document.body.appendChild(win);
+
+        // exit button
+        const exitBtn = win.querySelector('.exit');
+        exitBtn.addEventListener('click', () => {
+            playSound(exitsfx);
+            win.style.display = 'none';
+            win.style.zIndex = 0;
+        });
+
+        // make draggable
+        const header = win.querySelector('.win_header');
+        header.addEventListener('mousedown', (e) => {
+            draggedWindow = win;
+            draggedTitle = header;
+            offsetX = e.clientX - draggedWindow.offsetLeft;
+            offsetY = e.clientY - draggedWindow.offsetTop;
+            draggedTitle.style.cursor = 'grabbing';
+            draggedWindow.style.zIndex = ++zIndexCounter;
+        });
+    }
+
+    // populate
+    win.querySelector('.win_label p').textContent = data.title;
+    const content = win.querySelector('.projectContent');
+    content.innerHTML = '';
+    const descEl = document.createElement('p');
+    descEl.textContent = data.desc;
+    content.appendChild(descEl);
+
+    if (data.images && data.images.length) {
+        const gallery = document.createElement('div');
+        gallery.className = 'projectImages';
+        data.images.forEach((img) => {
+            const imgEl = document.createElement('img');
+            // if path already contains a slash assume full path, otherwise use assets/images/
+            imgEl.src = img.includes('/') ? img : `assets/images/${img}`;
+            imgEl.style.maxWidth = '100%';
+            imgEl.style.marginTop = '64px';
+            gallery.appendChild(imgEl);
+        });
+        content.appendChild(gallery);
+    }
+
+    win.style.display = 'flex';
+    win.style.fontSize = '24px';
+    win.style.zIndex = ++zIndexCounter;
+    win.scrollTop = 0;
+}
+
+// initialize project buttons after DOM ready
+window.addEventListener('load', () => {
+    try { setupProjectButtons(); } catch (e) { console.error(e); }
 });
 
 // typing animation and change text
