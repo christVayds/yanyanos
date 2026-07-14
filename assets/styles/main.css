@@ -74,7 +74,16 @@ a{
     height: 30px;
     background-color: var(--primary-color);
     margin-left: 5px;
-    /* animation: blink 1s infinite; */
+    animation: blink 1s steps(1, start) infinite;
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    51%, 100% {
+        opacity: 0;
+    }
 }
 
 .entry{

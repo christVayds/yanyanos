@@ -156,36 +156,49 @@ document.addEventListener('mouseup', () => {
     draggedTitle = null;
 });
 
-let seconds = 0
-let Word = ["Web Developer", "Game Developer", "Programmer", "Web Designer", "Graphic Artist", "System Developer", "UI/UX Designer", "Software Developer"]
-let wordIndex = 0
-let index = 0
-let word = ""
-let wait = false
+// typing animation and change text
 
-const changingText = document.getElementById("service");
-const timer = setInterval(() => {
-    seconds++
-    if(!wait){
-        word += Word[wordIndex][index]
-        changingText.textContent = word 
-        index++
-        if(index >= Word[wordIndex].length){
-            wordIndex++
-            if(wordIndex >= Word.length){
-                wordIndex = 0
-            }
-            index = 0
-            word = ""
-            seconds = 0
-            wait = true
+const Word = ["Web Developer", "Game Developer", "Programmer", "Web Designer", "Graphic Artist", "System Developer", "UI/UX Designer", "Software Developer"]
+let wordIndex = 0
+let charIndex = 0
+let isDeleting = false
+let delayCount = 0
+const typingSpeed = 70
+const deletingSpeed = 50
+const pauseAfterTyping = 32
+const pauseAfterDeleting = 8
+
+const changingText = document.getElementById("service")
+
+function updateTyping() {
+    const currentWord = Word[wordIndex]
+
+    if (!isDeleting) {
+        charIndex += 1
+        changingText.textContent = currentWord.substring(0, charIndex)
+
+        if (charIndex === currentWord.length) {
+            isDeleting = true
+            delayCount = pauseAfterTyping
         }
+    } else if (delayCount > 0) {
+        delayCount -= 1
     } else {
-        if(seconds >= 10){
-            wait = false
+        charIndex -= 1
+        changingText.textContent = currentWord.substring(0, charIndex)
+
+        if (charIndex === 0) {
+            isDeleting = false
+            wordIndex = (wordIndex + 1) % Word.length
+            delayCount = pauseAfterDeleting
         }
     }
-}, 50) // 1000ms = 1s
+
+    const nextDelay = isDeleting ? deletingSpeed : typingSpeed
+    setTimeout(updateTyping, nextDelay)
+}
+
+updateTyping()
 
 const aboutTimer = setInterval(() => {
     if(type){
